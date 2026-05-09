@@ -4,9 +4,18 @@ import summary from '../public/data/summary.json';
 import provinceStats from '../public/data/province-stats.json';
 import schools from '../public/data/schools.json';
 import admissions from '../public/data/admissions-2026.json';
+import trends from '../public/data/trends-10y.json';
+import majorEstimates from '../public/data/major-estimates.json';
 
 type ProvinceRow = (typeof provinceStats.rows)[number];
 type SchoolRow = (typeof schools.rows)[number];
+type TrendRow = (typeof trends.rows)[number];
+type TrendMetricKey = Exclude<keyof TrendRow, 'year'>;
+
+const chartColors = {
+  entrants: '#286f9f',
+  graduates: '#a4483f',
+};
 
 const formatter = new Intl.NumberFormat('zh-CN');
 
@@ -35,6 +44,11 @@ const regionSummary = Object.values(
     {},
   ),
 ).sort((a, b) => b.schoolCount - a.schoolCount);
+const latestTrendSource = trends.meta.sources.find((source) => source.year === 2024) ?? trends.meta.sources.at(-1);
+
+function growth(first: number, last: number) {
+  return `${(((last - first) / first) * 100).toFixed(1)}%`;
+}
 
 function Metric({
   label,
@@ -86,6 +100,156 @@ function BarList({
         );
       })}
     </div>
+  );
+}
+
+function linePath(rows: TrendRow[], key: TrendMetricKey, max: number) {
+  return rows
+    .map((row, index) => {
+      const x = 38 + index * (340 / (rows.length - 1));
+      const y = 152 - (Number(row[key]) / max) * 112;
+      return `${index === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)}`;
+    })
+    .join(' ');
+}
+
+function LinePanel({
+  title,
+  entrantKey,
+  graduateKey,
+}: {
+  title: string;
+  entrantKey: TrendMetricKey;
+  graduateKey: TrendMetricKey;
+}) {
+  const max = Math.max(...trends.rows.flatMap((row) => [Number(row[entrantKey]), Number(row[graduateKey])])) * 1.08;
+  const latest = trends.rows.at(-1);
+  return (
+    <div className="line-panel">
+      <div className="line-head">
+        <h3>{title}</h3>
+        <span>{latest ? `${wan(Number(latest[entrantKey]))} / ${wan(Number(latest[graduateKey]))}` : ''}</span>
+      </div>
+      <svg className="trend-chart" viewBox="0 0 410 178" role="img" aria-label={`${title}最近10年入学与毕业趋势`}>
+        <line x1="38" y1="40" x2="378" y2="40" />
+        <line x1="38" y1="96" x2="378" y2="96" />
+        <line x1="38" y1="152" x2="378" y2="152" />
+        <text x="8" y="43">{wan(max, 0)}</text>
+        <text x="24" y="156">0</text>
+        <text x="38" y="172">{trends.rows[0].year}</text>
+        <text x="344" y="172">{trends.rows.at(-1)?.year}</text>
+        <path d={linePath(trends.rows as TrendRow[], entrantKey, max)} style={{ stroke: chartColors.entrants }} />
+        <path d={linePath(trends.rows as TrendRow[], graduateKey, max)} style={{ stroke: chartColors.graduates }} />
+        {trends.rows.map((row, index) => {
+          const x = 38 + index * (340 / (trends.rows.length - 1));
+          const y = 152 - (Number(row[entrantKey]) / max) * 112;
+          return <circle key={`${title}-${row.year}-entrant`} cx={x} cy={y} r={2.5} style={{ fill: chartColors.entrants }} />;
+        })}
+        {trends.rows.map((row, index) => {
+          const x = 38 + index * (340 / (trends.rows.length - 1));
+          const y = 152 - (Number(row[graduateKey]) / max) * 112;
+          return <circle key={`${title}-${row.year}-graduate`} cx={x} cy={y} r={2.5} style={{ fill: chartColors.graduates }} />;
+        })}
+      </svg>
+      <div className="chart-legend">
+        <span>
+          <i style={{ background: chartColors.entrants }} />
+          入学
+        </span>
+        <span>
+          <i style={{ background: chartColors.graduates }} />
+          毕业
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function TrendSection() {
+  const first = trends.rows[0];
+  const latest = trends.rows.at(-1) ?? first;
+  return (
+    <section className="band" id="trends">
+      <div className="section-heading">
+        <div>
+          <p>最近10年</p>
+          <h2>本科、硕士、博士入学与毕业</h2>
+        </div>
+        <span>{trends.meta.note}</span>
+      </div>
+      <div className="trend-grid">
+        <LinePanel title="本科入学 / 本科毕业" entrantKey="undergraduateEntrants" graduateKey="undergraduateGraduates" />
+        <LinePanel title="硕士入学 / 硕士毕业" entrantKey="masterEntrants" graduateKey="masterGraduates" />
+        <LinePanel title="博士入学 / 博士毕业" entrantKey="doctorEntrants" graduateKey="doctorGraduates" />
+      </div>
+      <div className="trend-summary">
+        <div>
+          <span>2024 本科入学</span>
+          <strong>{wan(latest.undergraduateEntrants)}</strong>
+          <small>较2015年 {growth(first.undergraduateEntrants, latest.undergraduateEntrants)}</small>
+        </div>
+        <div>
+          <span>2024 硕士毕业</span>
+          <strong>{wan(latest.masterGraduates)}</strong>
+          <small>较2015年 {growth(first.masterGraduates, latest.masterGraduates)}</small>
+        </div>
+        <div>
+          <span>2024 博士入学</span>
+          <strong>{wan(latest.doctorEntrants)}</strong>
+          <small>较2015年 {growth(first.doctorEntrants, latest.doctorEntrants)}</small>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MajorSection() {
+  const max = Math.max(...majorEstimates.rows.map((row) => row.estimatedStudents));
+  return (
+    <section className="band" id="majors">
+      <div className="section-heading">
+        <div>
+          <p>专业结构</p>
+          <h2>专业大致人数</h2>
+        </div>
+        <span>{majorEstimates.meta.method}</span>
+      </div>
+      <div className="major-layout">
+        <div className="panel">
+          <h3>普通本科专业大类估算</h3>
+          <div className="major-list">
+            {majorEstimates.rows.map((row) => (
+              <div className="major-row" key={row.category}>
+                <span>{row.category}</span>
+                <div className="major-track">
+                  <div style={{ width: `${(row.estimatedStudents / max) * 100}%` }} />
+                </div>
+                <strong>{wan(row.estimatedStudents)}</strong>
+                <small>{(row.share * 100).toFixed(1)}%</small>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="panel method-panel">
+          <h3>口径</h3>
+          <dl className="facts single">
+            <div>
+              <dt>估算目标</dt>
+              <dd>{wan(majorEstimates.meta.targetUndergraduateEnrollment)}</dd>
+            </div>
+            <div>
+              <dt>结构来源</dt>
+              <dd>{majorEstimates.meta.basisYear} 年</dd>
+            </div>
+            <div>
+              <dt>最大类</dt>
+              <dd>{majorEstimates.rows[0].category}</dd>
+            </div>
+          </dl>
+          <p className="source-note">“专业”在这里按教育部学科门类/专业大类展示；逐个本科专业的在校人数尚无同口径全国公开表。</p>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -188,6 +352,8 @@ function App() {
         <a href="#overview">中国大学 2026 调研</a>
         <nav>
           <a href="#province">省份分布</a>
+          <a href="#trends">十年趋势</a>
+          <a href="#majors">专业结构</a>
           <a href="#schools">学校库</a>
           <a href="#admissions">招生跟踪</a>
           <a href="#conclusion">结论</a>
@@ -285,6 +451,10 @@ function App() {
         </div>
       </section>
 
+      <TrendSection />
+
+      <MajorSection />
+
       <section className="band" id="province">
         <div className="section-heading">
           <div>
@@ -380,6 +550,9 @@ function App() {
         <strong>数据来源</strong>
         <a href={summary.sources[0].url}>教育部《2024年全国教育事业发展统计公报》</a>
         <a href={summary.sources[1].url}>教育部《全国高等学校名单》</a>
+        {latestTrendSource ? <a href={latestTrendSource.undergraduateUrl}>教育部《高等教育普通本科学生数》</a> : null}
+        {latestTrendSource ? <a href={latestTrendSource.postgraduateUrl}>教育部《高等学校（机构）研究生数》</a> : null}
+        <a href={majorEstimates.meta.source.url}>教育部《普通本科分学科门类学生数》</a>
         <a href="https://www.moe.gov.cn/srcsite/A15/moe_776/s3258/202601/t20260121_1427110.html">
           教育部关于做好2026年普通高校招生工作的通知
         </a>

@@ -53,6 +53,12 @@ const sources = {
     url: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/2024/gedi/202603/t20260317_1431200.html',
     published: '2026-03-17',
   },
+  undergraduateDiscipline2022: {
+    title: '普通本科分学科门类学生数',
+    publisher: '中华人民共和国教育部',
+    url: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/2022/quanguo/202401/t20240110_1099511.html',
+    published: '2024-01-10',
+  },
   admissionsNotice2026: {
     title: '教育部关于做好2026年普通高校招生工作的通知',
     publisher: '中华人民共和国教育部',
@@ -60,6 +66,84 @@ const sources = {
     published: '2026-01-21',
   },
 };
+
+const trendSourceConfigs = [
+  {
+    year: 2015,
+    undergraduateTable: 'regular-and-short-cycle',
+    undergraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2015/2015_gd/201610/t20161011_284357.html',
+    postgraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2015/2015_gd/201610/t20161011_284356.html',
+  },
+  {
+    year: 2016,
+    undergraduateTable: 'regular-and-short-cycle',
+    undergraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2016/2016_gd/201708/t20170823_311752.html',
+    postgraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2016/2016_gd/201708/t20170823_311757.html',
+  },
+  {
+    year: 2017,
+    undergraduateTable: 'regular-and-short-cycle',
+    undergraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2017/gd/201808/t20180808_344744.html',
+    postgraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2017/gd/201808/t20180808_344749.html',
+  },
+  {
+    year: 2018,
+    undergraduateTable: 'regular-and-short-cycle',
+    undergraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2018/gd/201908/t20190812_394178.html',
+    postgraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2018/gd/201908/t20190812_394186.html',
+  },
+  {
+    year: 2019,
+    undergraduateTable: 'regular-and-short-cycle',
+    undergraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2019/gd/202006/t20200611_464825.html',
+    postgraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2019/gd/202006/t20200611_464851.html',
+  },
+  {
+    year: 2020,
+    undergraduateTable: 'regular-and-short-cycle',
+    undergraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/2020/gedi/202108/t20210831_556496.html',
+    postgraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/2020/gedi/202108/t20210831_556504.html',
+  },
+  {
+    year: 2021,
+    undergraduateTable: 'regular-undergraduate',
+    undergraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/2021/gedi/202212/t20221230_1037369.html',
+    postgraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/2021/gedi/202212/t20221230_1037373.html',
+  },
+  {
+    year: 2022,
+    undergraduateTable: 'regular-undergraduate',
+    undergraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/2022/gedi/202401/t20240110_1099503.html',
+    postgraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/2022/gedi/202401/t20240110_1099506.html',
+  },
+  {
+    year: 2023,
+    undergraduateTable: 'regular-undergraduate',
+    undergraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/2023/gedi/202501/t20250120_1176262.html',
+    postgraduateUrl: 'https://www.moe.gov.cn/jyb_sjzl/moe_560/2023/gedi/202501/t20250120_1176263.html',
+  },
+  {
+    year: 2024,
+    undergraduateTable: 'regular-undergraduate',
+    undergraduateUrl: sources.undergraduateStudents2024.url,
+    postgraduateUrl: sources.postgraduateStudents2024.url,
+  },
+];
+
+const disciplineCategories = [
+  { category: '哲学', english: 'Philosophy' },
+  { category: '经济学', english: 'Economics' },
+  { category: '法学', english: 'Law' },
+  { category: '教育学', english: 'Education' },
+  { category: '文学', english: 'Literature' },
+  { category: '历史学', english: 'History' },
+  { category: '理学', english: 'Science' },
+  { category: '工学', english: 'Engineering' },
+  { category: '农学', english: 'Agriculture' },
+  { category: '医学', english: 'Medicine' },
+  { category: '管理学', english: 'Management' },
+  { category: '艺术学', english: 'Art' },
+];
 
 const provinceNames = [
   '北京',
@@ -298,6 +382,100 @@ function parseStudentRows(rows, columns) {
   return output;
 }
 
+function compactText(value) {
+  return String(value ?? '').replace(/\s+/g, '').replace(/　/g, '').trim();
+}
+
+function numberCell(value) {
+  const text = String(value ?? '').replace(/,/g, '').replace(/[^\d.-]/g, '');
+  return Number(text || 0);
+}
+
+function findTotalRow(rows, sourceLabel) {
+  const row = rows.find((item) => compactText(item[0]).includes('总计') && item.slice(1).some((cell) => numberCell(cell) > 0));
+  validate(row, `could not find total row for ${sourceLabel}`);
+  return row;
+}
+
+async function buildTrendRows() {
+  const rows = await Promise.all(
+    trendSourceConfigs.map(async (source) => {
+      const [undergraduateRows, postgraduateRows] = await Promise.all([
+        readHtmlRows(source.undergraduateUrl),
+        readHtmlRows(source.postgraduateUrl),
+      ]);
+      const undergraduateTotal = findTotalRow(undergraduateRows, `${source.year} undergraduate`);
+      const postgraduateTotal = findTotalRow(postgraduateRows, `${source.year} postgraduate`);
+      const undergraduateEntrantsIndex = source.undergraduateTable === 'regular-and-short-cycle' ? 8 : 4;
+      const undergraduateGraduatesIndex = source.undergraduateTable === 'regular-and-short-cycle' ? 3 : 1;
+
+      return {
+        year: source.year,
+        undergraduateEntrants: numberCell(undergraduateTotal[undergraduateEntrantsIndex]),
+        undergraduateGraduates: numberCell(undergraduateTotal[undergraduateGraduatesIndex]),
+        masterEntrants: numberCell(postgraduateTotal[9]),
+        masterGraduates: numberCell(postgraduateTotal[4]),
+        doctorEntrants: numberCell(postgraduateTotal[8]),
+        doctorGraduates: numberCell(postgraduateTotal[3]),
+        postgraduateEntrants: numberCell(postgraduateTotal[9]) + numberCell(postgraduateTotal[8]),
+        postgraduateGraduates: numberCell(postgraduateTotal[4]) + numberCell(postgraduateTotal[3]),
+      };
+    }),
+  );
+
+  return rows.sort((a, b) => a.year - b.year);
+}
+
+function findDisciplineRow(rows, category) {
+  const row = rows.find((item) => {
+    const first = compactText(item[0]);
+    return first.startsWith(category) && !first.includes('总计中');
+  });
+  validate(row, `could not find discipline row for ${category}`);
+  return row;
+}
+
+async function buildMajorEstimates() {
+  const rows = await readHtmlRows(sources.undergraduateDiscipline2022.url);
+  const totalRow = findTotalRow(rows, sources.undergraduateDiscipline2022.title);
+  const sourceUndergraduateEnrollment = numberCell(totalRow[3]);
+  const targetUndergraduateEnrollment = summary.students.regularUndergraduateEnrollment;
+
+  const estimates = disciplineCategories.map((discipline) => {
+    const row = findDisciplineRow(rows, discipline.category);
+    const sourceEnrollment = numberCell(row[3]);
+    const share = sourceEnrollment / sourceUndergraduateEnrollment;
+    return {
+      category: discipline.category,
+      english: discipline.english,
+      sourceYear: 2022,
+      sourceGraduates: numberCell(row[1]),
+      sourceEntrants: numberCell(row[2]),
+      sourceEnrollment,
+      share: Number(share.toFixed(6)),
+      estimatedStudents: Math.round(targetUndergraduateEnrollment * share),
+    };
+  });
+
+  estimates.sort((a, b) => b.estimatedStudents - a.estimatedStudents);
+  const adjustment = targetUndergraduateEnrollment - sum(estimates, 'estimatedStudents');
+  estimates[0].estimatedStudents += adjustment;
+
+  return {
+    meta: {
+      generatedAt: SNAPSHOT_AT,
+      basisYear: 2022,
+      targetYear: 2024,
+      sourceUndergraduateEnrollment,
+      targetUndergraduateEnrollment,
+      method:
+        '按教育部2022年普通本科分学科门类学生数的在校生结构，等比例缩放到2024年普通本科在校生规模；这是专业大类估算，不等同于教育部逐专业官方人数。',
+      source: sources.undergraduateDiscipline2022,
+    },
+    rows: estimates,
+  };
+}
+
 function countBy(items, predicate) {
   return items.reduce((count, item) => count + (predicate(item) ? 1 : 0), 0);
 }
@@ -403,6 +581,17 @@ async function main() {
     note: '2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。',
   }));
 
+  const [trendRows, majorEstimates] = await Promise.all([buildTrendRows(), buildMajorEstimates()]);
+
+  validate(trendRows.length === 10, `expected 10 trend rows, got ${trendRows.length}`);
+  validate(trendRows[0].year === 2015 && trendRows.at(-1).year === 2024, 'trend year range mismatch');
+  validate(trendRows.at(-1).undergraduateEntrants === summary.admissions.regularUndergraduateEntrants, '2024 undergraduate entrants mismatch');
+  validate(
+    trendRows.at(-1).masterEntrants + trendRows.at(-1).doctorEntrants === summary.admissions.postgraduateEntrants,
+    '2024 postgraduate entrants mismatch',
+  );
+  validate(sum(majorEstimates.rows, 'estimatedStudents') === summary.students.regularUndergraduateEnrollment, 'major estimate total mismatch');
+
   await Promise.all([
     writeJson('summary.json', { ...summary, sources: [sources.educationStatBulletin2024, sources.schoolList2025] }),
     writeJson('schools.json', {
@@ -439,6 +628,22 @@ async function main() {
       },
       rows: admissionsRows,
     }),
+    writeJson('trends-10y.json', {
+      meta: {
+        generatedAt: SNAPSHOT_AT,
+        yearRange: '2015-2024',
+        note:
+          '本科2015-2020采用“高等教育普通本专科学生数”中的本科列，2021-2024采用“高等教育普通本科学生数”；硕士、博士采用“高等学校（机构）研究生数”的分层列。',
+        sources: trendSourceConfigs.map((source) => ({
+          year: source.year,
+          undergraduateTable: source.undergraduateTable,
+          undergraduateUrl: source.undergraduateUrl,
+          postgraduateUrl: source.postgraduateUrl,
+        })),
+      },
+      rows: trendRows,
+    }),
+    writeJson('major-estimates.json', majorEstimates),
     writeJson('sources.json', sources),
   ]);
 }

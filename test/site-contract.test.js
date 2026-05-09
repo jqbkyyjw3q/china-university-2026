@@ -9,6 +9,11 @@ test('site source exposes all requested research sections', async () => {
   assert.match(app, /学校级数据库/);
   assert.match(app, /2026 招生跟踪/);
   assert.match(app, /图表、地图和结论/);
+  assert.match(app, /最近10年/);
+  assert.match(app, /本科入学/);
+  assert.match(app, /硕士毕业/);
+  assert.match(app, /博士入学/);
+  assert.match(app, /专业大致人数/);
   assert.match(app, /3167/);
   assert.match(app, /489\.97/);
 });

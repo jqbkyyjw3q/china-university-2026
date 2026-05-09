@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "generatedAt": "2026-05-09T22:40:00+08:00",
+    "basisYear": 2022,
+    "targetYear": 2024,
+    "sourceUndergraduateEnrollment": 19656436,
+    "targetUndergraduateEnrollment": 20859138,
+    "method": "按教育部2022年普通本科分学科门类学生数的在校生结构，等比例缩放到2024年普通本科在校生规模；这是专业大类估算，不等同于教育部逐专业官方人数。",
+    "source": {
+      "title": "普通本科分学科门类学生数",
+      "publisher": "中华人民共和国教育部",
+      "url": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2022/quanguo/202401/t20240110_1099511.html",
+      "published": "2024-01-10"
+    }
+  },
+  "rows": [
+    {
+      "category": "工学",
+      "english": "Engineering",
+      "sourceYear": 2022,
+      "sourceGraduates": 1565928,
+      "sourceEntrants": 1662036,
+      "sourceEnrollment": 6742664,
+      "share": 0.343026,
+      "estimatedStudents": 7155222
+    },
+    {
+      "category": "管理学",
+      "english": "Management",
+      "sourceYear": 2022,
+      "sourceGraduates": 849793,
+      "sourceEntrants": 658804,
+      "sourceEnrollment": 3038017,
+      "share": 0.154556,
+      "estimatedStudents": 3223902
+    },
+    {
+      "category": "艺术学",
+      "english": "Art",
+      "sourceYear": 2022,
+      "sourceGraduates": 449084,
+      "sourceEntrants": 469839,
+      "sourceEnrollment": 1941644,
+      "share": 0.098779,
+      "estimatedStudents": 2060446
+    },
+    {
+      "category": "文学",
+      "english": "Literature",
+      "sourceYear": 2022,
+      "sourceGraduates": 466944,
+      "sourceEntrants": 457821,
+      "sourceEnrollment": 1925719,
+      "share": 0.097969,
+      "estimatedStudents": 2043546
+    },
+    {
+      "category": "医学",
+      "english": "Medicine",
+      "sourceYear": 2022,
+      "sourceGraduates": 333657,
+      "sourceEntrants": 347954,
+      "sourceEnrollment": 1599714,
+      "share": 0.081384,
+      "estimatedStudents": 1697594
+    },
+    {
+      "category": "理学",
+      "english": "Science",
+      "sourceYear": 2022,
+      "sourceGraduates": 298672,
+      "sourceEntrants": 337668,
+      "sourceEnrollment": 1314583,
+      "share": 0.066878,
+      "estimatedStudents": 1395017
+    },
+    {
+      "category": "经济学",
+      "english": "Economics",
+      "sourceYear": 2022,
+      "sourceGraduates": 262452,
+      "sourceEntrants": 233817,
+      "sourceEnrollment": 981385,
+      "share": 0.049927,
+      "estimatedStudents": 1041432
+    },
+    {
+      "category": "教育学",
+      "english": "Education",
+      "sourceYear": 2022,
+      "sourceGraduates": 222013,
+      "sourceEntrants": 220886,
+      "sourceEnrollment": 950210,
+      "share": 0.048341,
+      "estimatedStudents": 1008350
+    },
+    {
+      "category": "法学",
+      "english": "Law",
+      "sourceYear": 2022,
+      "sourceGraduates": 166470,
+      "sourceEntrants": 172974,
+      "sourceEnrollment": 711940,
+      "share": 0.036219,
+      "estimatedStudents": 755501
+    },
+    {
+      "category": "农学",
+      "english": "Agriculture",
+      "sourceYear": 2022,
+      "sourceGraduates": 76567,
+      "sourceEntrants": 85500,
+      "sourceEnrollment": 330960,
+      "share": 0.016837,
+      "estimatedStudents": 351210
+    },
+    {
+      "category": "历史学",
+      "english": "History",
+      "sourceYear": 2022,
+      "sourceGraduates": 21665,
+      "sourceEntrants": 28259,
+      "sourceEnrollment": 107200,
+      "share": 0.005454,
+      "estimatedStudents": 113759
+    },
+    {
+      "category": "哲学",
+      "english": "Philosophy",
+      "sourceYear": 2022,
+      "sourceGraduates": 2413,
+      "sourceEntrants": 3800,
+      "sourceEnrollment": 12400,
+      "share": 0.000631,
+      "estimatedStudents": 13159
+    }
+  ]
+}
