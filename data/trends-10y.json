@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "generatedAt": "2026-05-09T22:40:00+08:00",
+    "yearRange": "2015-2024",
+    "note": "本科2015-2020采用“高等教育普通本专科学生数”中的本科列，2021-2024采用“高等教育普通本科学生数”；硕士、博士采用“高等学校（机构）研究生数”的分层列。",
+    "sources": [
+      {
+        "year": 2015,
+        "undergraduateTable": "regular-and-short-cycle",
+        "undergraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2015/2015_gd/201610/t20161011_284357.html",
+        "postgraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2015/2015_gd/201610/t20161011_284356.html"
+      },
+      {
+        "year": 2016,
+        "undergraduateTable": "regular-and-short-cycle",
+        "undergraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2016/2016_gd/201708/t20170823_311752.html",
+        "postgraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2016/2016_gd/201708/t20170823_311757.html"
+      },
+      {
+        "year": 2017,
+        "undergraduateTable": "regular-and-short-cycle",
+        "undergraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2017/gd/201808/t20180808_344744.html",
+        "postgraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2017/gd/201808/t20180808_344749.html"
+      },
+      {
+        "year": 2018,
+        "undergraduateTable": "regular-and-short-cycle",
+        "undergraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2018/gd/201908/t20190812_394178.html",
+        "postgraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2018/gd/201908/t20190812_394186.html"
+      },
+      {
+        "year": 2019,
+        "undergraduateTable": "regular-and-short-cycle",
+        "undergraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2019/gd/202006/t20200611_464825.html",
+        "postgraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/jytjsj_2019/gd/202006/t20200611_464851.html"
+      },
+      {
+        "year": 2020,
+        "undergraduateTable": "regular-and-short-cycle",
+        "undergraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2020/gedi/202108/t20210831_556496.html",
+        "postgraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2020/gedi/202108/t20210831_556504.html"
+      },
+      {
+        "year": 2021,
+        "undergraduateTable": "regular-undergraduate",
+        "undergraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2021/gedi/202212/t20221230_1037369.html",
+        "postgraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2021/gedi/202212/t20221230_1037373.html"
+      },
+      {
+        "year": 2022,
+        "undergraduateTable": "regular-undergraduate",
+        "undergraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2022/gedi/202401/t20240110_1099503.html",
+        "postgraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2022/gedi/202401/t20240110_1099506.html"
+      },
+      {
+        "year": 2023,
+        "undergraduateTable": "regular-undergraduate",
+        "undergraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2023/gedi/202501/t20250120_1176262.html",
+        "postgraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2023/gedi/202501/t20250120_1176263.html"
+      },
+      {
+        "year": 2024,
+        "undergraduateTable": "regular-undergraduate",
+        "undergraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2024/gedi/202603/t20260317_1431199.html",
+        "postgraduateUrl": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2024/gedi/202603/t20260317_1431200.html"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "year": 2015,
+      "undergraduateEntrants": 3894184,
+      "undergraduateGraduates": 3585940,
+      "masterEntrants": 570639,
+      "masterGraduates": 497744,
+      "doctorEntrants": 74416,
+      "doctorGraduates": 53778,
+      "postgraduateEntrants": 645055,
+      "postgraduateGraduates": 551522
+    },
+    {
+      "year": 2016,
+      "undergraduateEntrants": 4054007,
+      "undergraduateGraduates": 3743680,
+      "masterEntrants": 589812,
+      "masterGraduates": 508927,
+      "doctorEntrants": 77252,
+      "doctorGraduates": 55011,
+      "postgraduateEntrants": 667064,
+      "postgraduateGraduates": 563938
+    },
+    {
+      "year": 2017,
+      "undergraduateEntrants": 4107534,
+      "undergraduateGraduates": 3841839,
+      "masterEntrants": 722225,
+      "masterGraduates": 520013,
+      "doctorEntrants": 83878,
+      "doctorGraduates": 58032,
+      "postgraduateEntrants": 806103,
+      "postgraduateGraduates": 578045
+    },
+    {
+      "year": 2018,
+      "undergraduateEntrants": 4221590,
+      "undergraduateGraduates": 3868358,
+      "masterEntrants": 762464,
+      "masterGraduates": 543644,
+      "doctorEntrants": 95502,
+      "doctorGraduates": 60724,
+      "postgraduateEntrants": 857966,
+      "postgraduateGraduates": 604368
+    },
+    {
+      "year": 2019,
+      "undergraduateEntrants": 4312880,
+      "undergraduateGraduates": 3947157,
+      "masterEntrants": 811334,
+      "masterGraduates": 577088,
+      "doctorEntrants": 105169,
+      "doctorGraduates": 62578,
+      "postgraduateEntrants": 916503,
+      "postgraduateGraduates": 639666
+    },
+    {
+      "year": 2020,
+      "undergraduateEntrants": 4431154,
+      "undergraduateGraduates": 4205097,
+      "masterEntrants": 990504,
+      "masterGraduates": 662451,
+      "doctorEntrants": 116047,
+      "doctorGraduates": 66176,
+      "postgraduateEntrants": 1106551,
+      "postgraduateGraduates": 728627
+    },
+    {
+      "year": 2021,
+      "undergraduateEntrants": 4445969,
+      "undergraduateGraduates": 4280970,
+      "masterEntrants": 1050703,
+      "masterGraduates": 700742,
+      "doctorEntrants": 125823,
+      "doctorGraduates": 72019,
+      "postgraduateEntrants": 1176526,
+      "postgraduateGraduates": 772761
+    },
+    {
+      "year": 2022,
+      "undergraduateEntrants": 4679358,
+      "undergraduateGraduates": 4715658,
+      "masterEntrants": 1103528,
+      "masterGraduates": 779845,
+      "doctorEntrants": 138951,
+      "doctorGraduates": 82320,
+      "postgraduateEntrants": 1242479,
+      "postgraduateGraduates": 862165
+    },
+    {
+      "year": 2023,
+      "undergraduateEntrants": 4781609,
+      "undergraduateGraduates": 4897422,
+      "masterEntrants": 1148404,
+      "masterGraduates": 927629,
+      "doctorEntrants": 153275,
+      "doctorGraduates": 87126,
+      "postgraduateEntrants": 1301679,
+      "postgraduateGraduates": 1014755
+    },
+    {
+      "year": 2024,
+      "undergraduateEntrants": 4899652,
+      "undergraduateGraduates": 5119577,
+      "masterEntrants": 1185664,
+      "masterGraduates": 986410,
+      "doctorEntrants": 171114,
+      "doctorGraduates": 97185,
+      "postgraduateEntrants": 1356778,
+      "postgraduateGraduates": 1083595
+    }
+  ]
+}
