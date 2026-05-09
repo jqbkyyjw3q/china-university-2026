@@ -2,6 +2,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import XLSX from '@e965/xlsx';
 
 const DATA_DIR = new URL('../public/data/', import.meta.url);
+const SNAPSHOT_AT = '2026-05-09T22:40:00+08:00';
 
 const sources = {
   educationStatBulletin2024: {
@@ -163,7 +164,7 @@ const aliases = new Map([
 ]);
 
 const summary = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: SNAPSHOT_AT,
   dataVersion: '0.1',
   scope: {
     region: '中国大陆',
@@ -411,14 +412,14 @@ async function main() {
         adultTotal: 248,
         undergraduateTotal: 1365,
         higherVocationalTotal: 1554,
-        generatedAt: new Date().toISOString(),
+        generatedAt: SNAPSHOT_AT,
         sources: [sources.schoolList2025, sources.regularSchoolListXls, sources.adultSchoolListXls],
       },
       rows: schools,
     }),
     writeJson('province-stats.json', {
       meta: {
-        generatedAt: new Date().toISOString(),
+        generatedAt: SNAPSHOT_AT,
         schoolCountSource: '2025-06-20全国高等学校名单',
         studentSource: '2024年教育统计数据各地基本情况',
         sources: [
@@ -432,7 +433,7 @@ async function main() {
     }),
     writeJson('admissions-2026.json', {
       meta: {
-        generatedAt: new Date().toISOString(),
+        generatedAt: SNAPSHOT_AT,
         status: 'tracking-skeleton',
         source: sources.admissionsNotice2026,
       },
