@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-05-09T14:33:48.081Z",
+  "dataVersion": "0.1",
+  "scope": {
+    "region": "中国大陆",
+    "excludes": [
+      "港澳台高校",
+      "军事院校"
+    ],
+    "note": "学校数量采用教育部截至2025年6月20日全国高等学校名单；人数规模采用教育部2024年教育统计数据与2024年全国教育事业发展统计公报。2026年招生计划和录取数据尚在招生季中，本站先建立跟踪表。"
+  },
+  "schoolCounts": {
+    "totalHigherEducationInstitutions": 3167,
+    "regularHigherEducationInstitutions": 2919,
+    "adultHigherEducationInstitutions": 248,
+    "undergraduateInstitutions": 1365,
+    "higherVocationalInstitutions": 1554
+  },
+  "students": {
+    "totalHigherEducationScale": 48460000,
+    "regularAndVocationalEnrollment": 38912600,
+    "regularUndergraduateEnrollment": 20859138,
+    "vocationalUndergraduateEnrollment": 406835,
+    "higherVocationalEnrollment": 17646595,
+    "postgraduateEnrollment": 4095436,
+    "adultEnrollment": 9425958,
+    "webBasedEnrollment": 6002718
+  },
+  "admissions": {
+    "regularUndergraduateEntrants": 4899652,
+    "regularUndergraduateEntrantsWan": 489.97,
+    "vocationalUndergraduateEntrants": 109619,
+    "higherVocationalEntrants": 5679401,
+    "postgraduateEntrants": 1356778,
+    "adultEntrants": 3619101,
+    "webBasedEntrants": 1499962
+  },
+  "teachers": {
+    "higherEducationTeachers": 2163500,
+    "regularUndergraduateTeachers": 1387600,
+    "vocationalUndergraduateTeachers": 45300,
+    "higherVocationalTeachers": 717000,
+    "adultHigherEducationTeachers": 13500
+  },
+  "sources": [
+    {
+      "title": "2024年全国教育事业发展统计公报",
+      "publisher": "中华人民共和国教育部",
+      "url": "https://www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html",
+      "published": "2025-06-11"
+    },
+    {
+      "title": "全国高等学校名单（截至2025年6月20日）",
+      "publisher": "中华人民共和国教育部",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202506/t20250627_1195683.html",
+      "published": "2025-06-27"
+    }
+  ]
+}

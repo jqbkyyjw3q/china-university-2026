@@ -1,0 +1,56 @@
+{
+  "educationStatBulletin2024": {
+    "title": "2024年全国教育事业发展统计公报",
+    "publisher": "中华人民共和国教育部",
+    "url": "https://www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html",
+    "published": "2025-06-11"
+  },
+  "schoolList2025": {
+    "title": "全国高等学校名单（截至2025年6月20日）",
+    "publisher": "中华人民共和国教育部",
+    "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202506/t20250627_1195683.html",
+    "published": "2025-06-27"
+  },
+  "regularSchoolListXls": {
+    "title": "全国普通高等学校名单",
+    "publisher": "中华人民共和国教育部",
+    "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202506/W020250729615142156867.xls",
+    "published": "2025-06-27"
+  },
+  "adultSchoolListXls": {
+    "title": "全国成人高等学校名单",
+    "publisher": "中华人民共和国教育部",
+    "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202506/W020250627301230143042.xls",
+    "published": "2025-06-27"
+  },
+  "provinceSchoolStats2024": {
+    "title": "高等教育学校（机构）数",
+    "publisher": "中华人民共和国教育部",
+    "url": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2024/gedi/202603/t20260317_1431201.html",
+    "published": "2026-03-17"
+  },
+  "undergraduateStudents2024": {
+    "title": "高等教育普通本科学生数",
+    "publisher": "中华人民共和国教育部",
+    "url": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2024/gedi/202603/t20260317_1431199.html",
+    "published": "2026-03-17"
+  },
+  "vocationalStudents2024": {
+    "title": "高等教育职业本专科学生数",
+    "publisher": "中华人民共和国教育部",
+    "url": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2024/gedi/202603/t20260317_1431198.html",
+    "published": "2026-03-17"
+  },
+  "postgraduateStudents2024": {
+    "title": "高等学校（机构）研究生数",
+    "publisher": "中华人民共和国教育部",
+    "url": "https://www.moe.gov.cn/jyb_sjzl/moe_560/2024/gedi/202603/t20260317_1431200.html",
+    "published": "2026-03-17"
+  },
+  "admissionsNotice2026": {
+    "title": "教育部关于做好2026年普通高校招生工作的通知",
+    "publisher": "中华人民共和国教育部",
+    "url": "https://www.moe.gov.cn/srcsite/A15/moe_776/s3258/202601/t20260121_1427110.html",
+    "published": "2026-01-21"
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "meta": {
+    "generatedAt": "2026-05-09T14:33:49.748Z",
+    "status": "tracking-skeleton",
+    "source": {
+      "title": "教育部关于做好2026年普通高校招生工作的通知",
+      "publisher": "中华人民共和国教育部",
+      "url": "https://www.moe.gov.cn/srcsite/A15/moe_776/s3258/202601/t20260121_1427110.html",
+      "published": "2026-01-21"
+    }
+  },
+  "rows": [
+    {
+      "province": "北京",
+      "region": "华北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "天津",
+      "region": "华北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "河北",
+      "region": "华北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "山西",
+      "region": "华北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "内蒙古",
+      "region": "华北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "辽宁",
+      "region": "东北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "吉林",
+      "region": "东北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "黑龙江",
+      "region": "东北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "上海",
+      "region": "华东",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "江苏",
+      "region": "华东",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "浙江",
+      "region": "华东",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "安徽",
+      "region": "华东",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "福建",
+      "region": "华东",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "江西",
+      "region": "华东",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "山东",
+      "region": "华东",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "河南",
+      "region": "华中",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "湖北",
+      "region": "华中",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "湖南",
+      "region": "华中",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "广东",
+      "region": "华南",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "广西",
+      "region": "华南",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "海南",
+      "region": "华南",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "重庆",
+      "region": "西南",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "四川",
+      "region": "西南",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "贵州",
+      "region": "西南",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "云南",
+      "region": "西南",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "西藏",
+      "region": "西南",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "陕西",
+      "region": "西北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "甘肃",
+      "region": "西北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "青海",
+      "region": "西北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "宁夏",
+      "region": "西北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    },
+    {
+      "province": "新疆",
+      "region": "西北",
+      "status": "待更新",
+      "planPublished": false,
+      "admissionResultPublished": false,
+      "policySource": "",
+      "planSource": "",
+      "resultSource": "",
+      "note": "2026年省级招生计划和录取数据发布后补录；当前仅保留跟踪位。"
+    }
+  ]
+}
